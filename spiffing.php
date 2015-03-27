@@ -125,7 +125,7 @@
 		public function process() {
 			// The finished CSS.
 			$processed			= '';
-			// The array which will hold all found CSS attributes to be repalced.
+			// The array which will hold all found CSS attributes to be replaced.
 			$replacements		= array();
 			// The magic pattern which finds ONLY attributes.
 			$pattern			= '/(?:(?:\s|\t)*|\;)([\w-]*):/i';
