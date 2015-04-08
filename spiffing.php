@@ -9,7 +9,7 @@
  *
  * Example of use:
  * 
- * Take your typical string CSS which you want to be be parsed by
+ * Take your typical string CSS which you want to be parsed by
  * Her Majesty the Queen's Spiffing CSS parser:
  *
  * $royalty	= "body {
@@ -129,10 +129,10 @@
 			$replacements		= array();
 			// The magic pattern which finds ONLY attributes.
 			$pattern			= '/(?:(?:\s|\t)*|\;)([\w-]*):/i';
-			// One should begin by searching the CSS for exlusive Britishness.
+			// One should begin by searching the CSS for exclusive Britishness.
 			preg_match_all( $pattern, $this->css, $matches );
 			foreach( $matches[1] as $index => $value ) {
-				// Let's run through the Queen's dictionary for every found term.
+				// Let's run through the Queen's dictionary for every term found.
 				foreach( $this->dictionary as $british => $primitive ) {
 					// Did we find some Britishness?
 					if( strpos( $value, $british ) !== FALSE ) {
