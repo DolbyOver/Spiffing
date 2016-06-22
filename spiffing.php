@@ -176,7 +176,10 @@
 			// Let's check if we should do something about that.
 			if ( $this->fail_gracefully == FALSE ) {
 				//  Set the header
-				$this->set_header( 'HTTP/1.0 404 Not Found' );
+				if($_SERVER['SERVER_PROTOCOL'] == 'HTTP/1.1')
+					$this->set_header( 'HTTP/1.1 404 Not Found' );
+				else
+					$this->set_header( 'HTTP/1.0 404 Not Found' );
 				//  And stop execution. We don't need no content.
 				exit;
 			}
